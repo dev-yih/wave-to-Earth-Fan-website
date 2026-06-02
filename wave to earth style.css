@@ -1,0 +1,527 @@
+        @font-face {
+            font-family: "love0.3";
+            src: url("https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap");
+        }
+
+        :root {
+        /* main color blue */
+        --midnight-navy: #0d1b2a;
+        --deep-ocean: #1b263b; 
+        --fog-blue: #415a77;
+        --cloud-gray: #778da9;
+
+        /* soft */
+        --soft-cream: #f4f1de;
+        --warm-sand: #d9c7a3;
+
+        /* green */
+        --forest-moss: #4f6f52;
+        --sage-green: #7a9e7e;
+
+        /* orange */
+        --sunset-orange: #c97b63;
+        --dusty-rose: #b0898c;
+
+        /* modern */
+        --vinyl-black: #111111;
+        --silver-light: #e0e1dd;
+        }
+
+        * { padding: 0; margin: 0; }
+
+        body {
+            background: linear-gradient(#ffffff,#ececec, #ffffff);
+        }
+        ::-webkit-scrollbar {
+        display: none;
+        }
+
+        /* HEADER */
+
+        header {
+            height: 90px;
+            padding: 0 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            outline: 3px solid #cccccc;
+        }
+
+        .header-box {
+            height: auto;
+            width: auto;
+            position: fixed;
+
+        }
+
+        .logo-section {
+            display: flex;
+            gap: 50px;
+        }
+
+        .logo-section img {
+            width: auto;
+            height: 48px;
+            object-fit: cover;
+        }
+        
+        .menu {
+            display: flex;
+            gap: 50px;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .menu a {
+            color: var(--vinyl-black);
+            text-decoration: none;
+            font-size: 25px;
+            font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        /* HOME */
+
+        .home {
+            width: 100%;
+            height: 2000px;
+        }
+
+        .home-section {
+            width: 100%;
+        }
+
+        .home-background-img {
+            width: 100%;
+            margin-bottom: 80px;
+        }
+
+        .home-wte-links {
+            display: flex;
+            justify-content: space-evenly;
+            margin-bottom: 100px;
+        }
+
+        .home-wte-links-img {
+            width: 50px;
+            height: auto;
+        }
+
+        .home-wte-links-img:hover {
+            opacity: 0.5;
+        }
+
+        .home-background-h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .home-member-profile {
+            width: 100%;
+            height: 300px;
+            display: flex;
+            justify-content: space-evenly;
+            margin-bottom: 8px;
+        }
+
+        .home-member-img {
+            outline: 3px solid #818181;
+            border-radius: 5px;
+            box-shadow: 0px 0px 20px 1px;
+        }
+
+        .home-member {
+            display: flex;
+            text-align: center;
+            margin-bottom: 10px;
+            justify-content: space-evenly;
+        }
+
+        .home-session {
+            display: flex;
+            text-align: center;
+            margin-top: 2%;
+            margin-bottom: 10px;
+            justify-content: center;
+        }
+
+        .home-session a {
+            text-decoration: none;
+            color: #415a77;
+        }
+
+        .home-artwork {
+            display: flex;
+            text-align: center;
+            margin-top: 2%;
+            margin-bottom: 10px;
+            justify-content: center;
+        }
+
+        .home-artwork a {
+            text-decoration: none;
+            color: #415a77;
+        }
+
+        .home-member a {
+            text-decoration: none;
+            color: #415a77;
+        }
+
+        .home-member a:hover {
+            color: #1b263b;
+            transition: 0.5s;
+        }
+
+        /* DISCOGRAPHY */
+
+        .discography-section {
+            margin-top: 10rem;
+            width: 100%;
+            height: 1500px;
+        }
+
+        .discography-section h1 {
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        .discography-section hr {
+            margin-bottom: 3rem;
+        }
+
+        .discography-album-grid {
+            margin-bottom: 3rem;
+            display: flex;
+            gap: 7em;
+            justify-content: center;
+        }
+
+        .discography-album-img {
+            width: auto;
+            max-height: 280px;
+            box-shadow: 0px 0px 30px 1px var(--midnight-navy);
+            overflow: hidden; 
+        }
+        .photo-album {
+            max-width: 100%;
+            max-height: auto;
+            width: 280px;
+            height: auto;
+            transition: transform 0.3s ease;
+        }
+        
+        .text-album {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+
+            color: var(--midnight-navy);
+            font-size: 24px;
+            font-weight: bold;
+            -webkit-text-stroke: 0.5px var(--vinyl-black);
+
+            opacity: 0;
+            transform: translateY(20px);
+
+            transition: 0.3s ease;
+        }
+        
+        .discography-album-img:hover {
+            cursor: pointer;
+            transform: scale(1.05);
+            transition: 0.3s ease;
+        }
+
+        .discography-album-img:hover .text-album {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .discography-single-grid {
+            margin-top: 5rem;
+            display: grid;
+            display: flex;
+            grid-template-columns: repeat(9 1fr);
+            justify-content: center;
+            gap: 3em;
+        }
+
+        .discography-single-img {
+            width: auto;
+            max-height: 140px;
+            position: relative;
+            box-shadow: 0px 0px 20px 1px var(--midnight-navy);
+            overflow: hidden;
+        }
+
+        .photo-single {
+            max-width: 100%;
+            max-height: auto;
+            width: 140px;
+            height: auto;
+            display: block;
+
+            transition: transform 0.3s ease;
+        }
+
+        .text-single {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+
+            color: #dcffff;
+            font-size: 16px;
+            font-weight: bold;
+            -webkit-text-stroke:0.6px #111111;
+
+
+            opacity: 0;
+            transform: translateY(20px);
+
+            transition: 0.3s ease;
+        }
+        .discography-single-img:hover {
+            cursor: pointer;
+            transform: scale(1.05);
+            transition: 0.3s ease;
+        }
+
+        .discography-single-img:hover .text-single {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+
+
+
+
+
+
+        /* TOUR */
+
+        .tour-section {
+            margin-top: 120px;
+            width: 100%;
+            height: 1000px;
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .tour {
+            width: 400px;
+            height: auto;
+        }
+
+        .tour img {
+            width: 400px;
+            height: auto;
+            box-shadow: 0px 0px 50px 1px #000000;
+        }
+
+        .tour p {
+            font-size: 40px;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .tour-name-1 {
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            background: linear-gradient(to right top, #ecff4b,#36382c);
+            color: transparent;
+            -webkit-background-clip: text;
+        }
+
+        .tour-name-2 {
+            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            background: linear-gradient(to right top, #f2eb67, #82a3bf);
+            color: transparent;
+            -webkit-background-clip: text;
+        }
+
+
+
+
+        .tour-name-3 {
+            font-weight: bold;
+            font-family: "love0.3", "Bitstream Vera Serif", serif;
+            background: linear-gradient(to right top, #e6a241, #894f21);
+            color: transparent;
+            -webkit-background-clip: text;
+        }
+        
+        .tour a {
+            text-decoration: none;
+        }
+
+
+
+
+
+
+        /* MERCHAN */
+
+        .merchan-section {
+            width: 100%;
+            height: 1000px;
+            display: grid;
+            grid-template-columns: repeat(4, auto);
+            justify-content: space-evenly;
+
+        }
+
+        .merchan-card {
+            width: 370px;
+            height: 410px;
+            overflow: hidden;
+        }
+        
+        .merchan-card a {
+            text-decoration: none;
+            color: var(--deep-ocean);
+        }
+
+        .merchan-img-section img {
+            width: 370px;
+            height: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: -14px;
+        }
+
+        .merchan-img-section:hover {
+            opacity: 0.5;
+            transform: scale(1.05);
+            transition: 0.5s;
+            cursor: pointer;
+        }
+
+        .merchan-text-section p {
+            text-align: center;
+            font-size: 18px;
+        }
+
+        /* CONTECT */
+
+        .contect-section {
+            width: auto;
+            height: 650px;
+            margin-top: 50px;
+        }
+
+        .contect-input {
+            width: auto;
+            height: auto;
+            margin-left: 5%;
+            font-size: 20px;
+        }
+
+        .contect-input input:focus {
+            border-width: 0 0 2px;
+        }
+
+        .contect-input input {
+            margin-bottom: 30px;
+            border-width: 0 0 1px;
+            font-size: 25px;
+            outline: none;
+        }
+        .contect-input textarea {
+            margin-bottom: 30px;
+            border-width: 0 0 1px;
+            font-size: 25px;
+            outline: none;
+        }
+
+
+        .ctcauopi-section {
+            margin: auto;
+            width: 1300px;
+            height: 400px;
+        }
+
+        .CTCAU-OPI {
+            outline: 1px solid #000000;
+            width: 1300px;
+            height: auto;
+            display: flex;
+            margin: auto;
+        }
+        
+        .input-checkbox {
+            font-size: 20px;
+            margin-top: 5px;
+            margin-bottom: 5%;
+            accent-color: rgb(0, 0, 0);
+        }
+
+        .input-checkbox input {
+            width: 20px;
+            height: 20px;
+        }
+
+        .send-button {
+            display: flex;
+            margin: auto;
+            width: 70px;
+            height: 35px;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            border-radius: 5px;
+            border: none;
+            background-color: #000000;
+            color: white;
+        }
+
+        .send-button:hover {
+            background-color: #96aece;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+        footer {
+            height: 100px;
+            width: auto;
+            background: #dbdbdb;
+            box-shadow: 0 0 80px 80px #dbdbdb;
+            color: #949494;
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        footer img {
+            width: auto;
+            height: 50px;
+            opacity: 40%;
+        }
+
+        .subscribe input {
+            background: none;
+            border: 1px solid #949494;
+            padding: 10px;
+        }
+
+        .subscribe input:focus {
+            border: 1px solid #000000;
+            outline: none;
+        }
+
+        .subscribe button {
+            padding: 11px;
+            background-color: black;
+            color:white;
+            border-radius: 5px;
+            border: none;
+        }
+
+        .subscribe button:hover {
+            background-color: #778da9;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+        .subscribe p {
+            font-size: 13px;
+        }

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>summer flow 0.02</title>
+    <style>
+        :root {
+            --color-md: #cacaca;
+            --color-dk: #A4ACAE;
+            --color-lt: #E8EAEB;
+        }
+
+        * { padding: 0; margin: 0; }
+
+        body {
+            background: linear-gradient(120deg, #F9DED8 ,#E97A64, #E3593E, #F9DED8);
+            background-repeat: no-repeat;
+            height: 1500px;
+        }
+
+        header {
+            height: 90px;
+            padding: 0 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            outline: 3px solid #56180C;
+            color: #56180C;
+        }
+
+        .logo-section {
+            display: flex;
+            gap: 50px;
+        }
+
+        .logo-section img {
+            width: auto;
+            height: 48px;
+            object-fit: cover;
+        }
+
+        .menu {
+            display: flex;
+            gap: 50px;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .cover-section {
+            margin-top: 70px;
+            width: 100%;
+            height: 350px;
+            justify-content: center;
+
+        }
+
+        .cover-img {
+            position: absolute;
+            left: 50%;
+            width: 350px;
+            height: 350px;
+            transform: translateX(-50%);
+            box-shadow: 0px 0px 30px 0.1px;
+        }
+
+        .song-list-section {
+            display: flex;
+            justify-content: space-evenly;
+            margin-top: 50px;
+            width: 100%;
+            height: 900px;
+        }
+
+        .song-list {
+            width: auto;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 30px;
+            text-align: left;
+            color: #56180C;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo-section">
+            <a href="wave to earth.html">
+                <img src="album\wte-img\wte logo.webp" alt="wtelogo">
+            </a>
+        </div>
+        <div class="menu">
+            <h1>wave 0.01</h1>
+        </div>
+    </header>
+
+    <section class="cover-section">
+        <img class="cover-img" src="album/album-img/wave 0.01.webp" alt="wave 0.01">
+    </section>
+
+
+    <section class="song-list-section"> 
+        <div class="song-list">
+            <h3>1. gold         </h3>
+            <h3>2. bonfire      </h3>
+            <h3>3. wave         </h3>
+            <h3>4. light        </h3>
+            <h3>5. bird         </h3>
+            <h3>6. purple lake  </h3>
+
+        </div>
+
+    </section>
+</body>
+</html>
